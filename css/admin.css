@@ -10,3 +10,9 @@
     width: 80%;
     margin: 0 auto;
 }
+
+/* CSS for Menu */
+.menu ul{
+    list-style-type: none;
+}
+.menu
