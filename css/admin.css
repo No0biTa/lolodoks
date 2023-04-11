@@ -11,6 +11,12 @@
     margin: 0 auto;
 }
 
+/* CSS for Menu */
+.menu ul{
+    list-style-type: none;
+}
+.menu
+
 .text-center{
     margin: auto;
     text-align: center;

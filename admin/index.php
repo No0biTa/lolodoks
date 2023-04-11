@@ -12,7 +12,12 @@
         <!-- Menu Seciton Start -->
         <div class="menu">
             <div class="wrapper">
-                Menu Here
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Food</a></li>
+                    <li><a href="#">Order</a></li>
             </div>
         </div>
         <!-- Menu Section End -->
