@@ -1,7 +1,7 @@
 <!-- Footer Seciton Start -->
 <div class="footer">
         <div class="wrapper">
-                Footer Here
+                <p class="text-center">2023 All Rights Reserved, Lolodoks. Developed By - Kelompok 6</p>
             </div>
         </div>
         <!-- Footer Section End -->
