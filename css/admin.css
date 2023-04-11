@@ -10,3 +10,8 @@
     width: 80%;
     margin: 0 auto;
 }
+
+.text-center{
+    margin: auto;
+    text-align: center;
+}
