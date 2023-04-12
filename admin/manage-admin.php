@@ -6,7 +6,7 @@
               <h4>Manage Admin</h4>
                 <br />
               <!-- Button to Add Admin -->
-        <a href="#"><button type="button" class="btn btn-default waves-effect waves-light">Add Admin</button></a>
+              <a href="add-admin.php"><button type="button" class="btn btn-default waves-effect waves-light">Add Admin</button></a>
 
               <br /><br/>
 
@@ -23,8 +23,8 @@
                         <td>Dummy</td>
                         <td>Dummy</td>
                         <td>
-                                <a href="#" class="btn btn-success waves-teal">Update Admin </a>       
-                                <a href="#" class="btn btn-danger waves-teal">Delete Admin</a>
+                                Update Admin        
+                                Delete Admin
                         </td>
                 </tr>
 
@@ -33,8 +33,8 @@
                         <td>Dummy</td>
                         <td>Dummy</td>
                         <td>
-                            <a href="#" class="btn btn-success waves-teal">Update Admin </a>
-                            <a href="#" class="btn btn-danger waves-teal">Delete Admin</a>
+                                Update Admin        
+                                Delete Admin
                         </td>
                 </tr>
 
@@ -43,8 +43,8 @@
                         <td>Dummy</td>
                         <td>Dummy</td>
                         <td>
-                            <a href="#" class="btn btn-success waves-teal">Update Admin </a>
-                            <a href="#" class="btn btn-danger waves-teal">Delete Admin</a>
+                                Update Admin        
+                                Delete Admin
                         </td>
                 </tr>
               </table>
