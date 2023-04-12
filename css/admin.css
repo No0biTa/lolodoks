@@ -20,6 +20,27 @@
     clear: both;
 }
 
+.tbl-full{
+    width: 100%;
+}
+
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+
+table tr td{
+    padding: 1%;
+}
+
+.btn-primary{
+    background-color: #1e90ff;
+    padding: 1%;
+    border: solid;
+    color: white;
+}
+
 /* CSS for Menu */
 .menu{
     border-bottom: 1px solid grey;
