@@ -51,6 +51,7 @@ table tr td{
     margin: 10px;
     cursor: pointer;
     border-radius: 8px;
+    font-weight: bold;
     text-decoration: none;
     outline: none !important;
     -webkit-transition: 0.2s ease-out;
@@ -85,7 +86,29 @@ table tr td{
   
   .btn-default:hover,
   .btn-default:focus {
-    background-color: #0984e3 !important;
+    background-color: #2980b9 !important;
+    color: #fff !important;
+  }
+
+  .btn-success {
+    color: #fff;
+    background-color: #2ed573;
+  }
+  
+  .btn-success:hover,
+  .btn-success:focus {
+    background-color: #00b894 !important;
+    color: #fff !important;
+  }
+
+  .btn-danger {
+    color: #fff;
+    background-color: #e74c3c;
+  }
+  
+  .btn-danger:hover,
+  .btn-danger:focus {
+    background-color: #c0392b !important;
     color: #fff !important;
   }
   
