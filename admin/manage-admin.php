@@ -6,9 +6,7 @@
               <h4>Manage Admin</h4>
                 <br />
               <!-- Button to Add Admin -->
-              <!-- Compiled and minified CSS -->
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-              <a href="#!" class="btn waves-effect waves-light">Add Admin</a>
+              <a href="#"><button type="button" class="btn btn-default waves-effect waves-light">Add Admin</button></a>
 
               <br /><br/>
 
@@ -55,7 +53,7 @@
         </div>
         <!-- Main Content Seciton End -->
 
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Javascript Material -->
+      <script type="text/javascript" src="../js/material.js"></script>
 
 <?php include('partials/footer.php'); ?>
