@@ -4,6 +4,10 @@
   <div class="wrapper">
     <h1>Manage Category</h1>
     
+         <br />
+              <!-- Button to Add Admin -->
+              <a href="#"><button type="button" class="btn btn-default waves-effect waves-light">Add Category</button></a>
+    
               <br /><br/>
 
               <table class="tbl-full">
