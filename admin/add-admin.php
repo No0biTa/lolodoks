@@ -73,6 +73,6 @@
 		$conn = mysqli_connect('myHost','myUser','myPass') or die(mysqli_error));//database connection
 		$db_select = mysqli_select_db($conn, "lolodoks") or die(mmysqli_error());//Selecting Database
 		
-		$res = mysqli_query() or die(myswl_error()); 
+		$res = mysqli_query() or die(mysql_error()); 
 	}
  ?>
