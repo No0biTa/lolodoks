@@ -3,10 +3,6 @@
 <div class="main-content">
   <div class="wrapper">
     <h1>Manage Order</h1>
-    
-     <br />
-              <!-- Button to Add Admin -->
-              <a href="#"><button type="button" class="btn btn-default waves-effect waves-light">Add Order</button></a>
 
               <br /><br/>
 
