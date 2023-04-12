@@ -6,7 +6,7 @@
               <h4>Manage Admin</h4>
                 <br />
               <!-- Button to Add Admin -->
-              <a href="#"><button type="button" class="btn btn-default waves-effect waves-light">Add Admin</button></a>
+              <a href="add-admin.php"><button type="button" class="btn btn-default waves-effect waves-light">Add Admin</button></a>
 
               <br /><br/>
 
