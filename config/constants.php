@@ -1,9 +1,9 @@
 <?php
 	//Session start
-	// session_start();
+	session_start();
 
 		//Create Constants to store non Repeating Values
-		// define('ADMIN_PAGE', );
+		define('HOME', 'http://localhost/lolodoks' );
 		define('LOCALHOST', '34.101.114.64');
 		define('DB_USERNAME', 'koala');
 		define('DB_PASSWORD', 'Koala@123');
