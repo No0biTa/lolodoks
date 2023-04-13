@@ -19,8 +19,8 @@
                         <td>Dummy</td>
                         <td>Dummy</td>
                         <td>
-                                <a href="#" class="btn-success">Update Admin</a>        
-                                <a href="#" class="btn-danger">Delete Admin</a>
+                                <a href="#" class="btn btn-default waves-teal btn-success">Update Admin</a>        
+                                <a href="#" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
                         </td>
                 </tr>
 
@@ -29,8 +29,8 @@
                         <td>Dummy</td>
                         <td>Dummy</td>
                         <td>
-                                <a href="#" class="btn-success">Update Admin</a>        
-                                <a href="#" class="btn-danger">Delete Admin</a>
+                                <a href="#" class="btn btn-default waves-teal btn-success">Update Admin</a>        
+                                <a href="#" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
                         </td>
                 </tr>
 
@@ -39,8 +39,8 @@
                         <td>Dummy</td>
                         <td>Dummy</td>
                         <td>
-                                <a href="#" class="btn-success">Update Admin</a>        
-                                <a href="#" class="btn-danger">Delete Admin</a>
+                                <a href="#" class="btn btn-default waves-teal btn-success">Update Admin</a>        
+                                <a href="#" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
                         </td>
                 </tr>
               </table>
