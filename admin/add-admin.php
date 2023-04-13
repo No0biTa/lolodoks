@@ -1,17 +1,27 @@
 <?php include('partials/menu.php'); ?>
  
- <div class="main-content">
+	<div class="main-content">
 		<div class="wrapper">
-		   <h1>Add Admin</h1>
-		   <br><br>
-		   <form action="" method="POST">
+			<h1>Add Admin</h1>
+			<br><br>
+			<form action="" method="POST">
 				<table class="tbl-50">
-					<tr>
+					<!-- <tr>
 						<td>Full Name</td>
 						<td>	
 							<input type="text" name="full_name" placeholder="Enter Your Name">
 						</td>
-					</tr>
+					</tr> -->
+
+					<div class="formbold-mb-5">
+						<label for="name" class="formbold-form-label"> Full Name </label>
+						<input
+						type="text"
+						name="full_name"
+						placeholder="Full Name"
+						class="formbold-form-input"
+						/>
+					</div>
 					
 					<tr>
 						<td>Username</td>
@@ -35,7 +45,7 @@
 				</table>
 				
 		</form>
-		</div>
+	</div>
 
 
 <?php include('partials/footer.php'); ?>
