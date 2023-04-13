@@ -10,7 +10,7 @@
 		define('DB_NAME', 'lolodoks');
 		
 		// Execute Query and Save Data in Database
-		$conn = mysqli_connect(LOCALHOST,DB_USERNAME,DB_PASSWORD) or die(mysqli_error($conn)); //Connect to DB
+		$conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD) or die(mysqli_error($conn)); //Connect to DB
 		$db_select = mysqli_select_db($conn,DB_NAME) or die(mysqli_error($conn)); //Select a DB
 		
 		
