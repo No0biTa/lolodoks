@@ -2,45 +2,34 @@
  
 	<div class="main-content">
 		<div class="wrapper">
-			<h1>Add Admin</h1>
-			<br><br>
+			<h2>Add Admin</h2>
+			<br/>
+            <?php
+            if(isset($_SESSION['add']))
+            {
+                echo $_SESSION['add'];
+                unset($_SESSION['add']);
+            }
+            ?><br/>
 			<form action="" method="POST">
 				<table class="tbl-50">
-					<!-- <tr>
-						<td>Full Name</td>
-						<td>	
-							<input type="text" name="full_name" placeholder="Enter Your Name">
-						</td>
-					</tr> -->
+					<div class="formbold-mb-2">
+						<label for="full_name" class="formbold-form-label"> Full Name </label>
+						<input type="text" name="full_name" placeholder="Full Name" class="formbold-form-input" />
+					</div><br/>
 
-					<div class="formbold-mb-5">
-						<label for="name" class="formbold-form-label"> Full Name </label>
-						<input
-						type="text"
-						name="full_name"
-						placeholder="Full Name"
-						class="formbold-form-input"
-						/>
+                    <div class="formbold-mb-2">
+                        <label for="username" class="formbold-form-label"> Username </label>
+                        <input type="text" name="username" placeholder="Username" class="formbold-form-input" />
+                    </div><br/>
+
+                    <div class="formbold-mb-2">
+                        <label for="username" class="formbold-form-label"> Password </label>
+                        <input type="password" name="password" placeholder="Password" class="formbold-form-input" />
+                    </div><br/>
+					<div class="formbold-mb-2">
+                        <input type="submit" name="submit" value="Save" class="btn btn-default waves-teal btn-success">
 					</div>
-					
-					<tr>
-						<td>Username</td>
-						<td>
-							<input type="text" name="username" placeholder="Your Username">
-						</td>
-					</tr><br/>
-					
-					<tr>
-						<td>Password </td>
-						<td>
-							<input type="password" name="password" placeholder="Your Password"> 
-						</td>
-					</tr>
-					
-					<tr>
-						<td>
-							<input type="submit" name="submit" value="Save" class="btn btn-default waves-teal btn-success">
-					</tr>
 					
 				</table>
 				

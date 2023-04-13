@@ -221,14 +221,14 @@ table tr td{
   }
 
   .formbold-form-input {
-    width: 100%;
+    width: 20%;
     padding: 12px 24px;
     border-radius: 6px;
     border: 1px solid #e0e0e0;
     background: white;
     font-weight: 500;
-    font-size: 16px;
-    color: #6b7280;
+    font-size: 14px;
+    color: #2d3436;
     outline: none;
     resize: none;
   }
@@ -286,3 +286,4 @@ table tr td{
     padding: 2%;
     float: left;
 }
+
