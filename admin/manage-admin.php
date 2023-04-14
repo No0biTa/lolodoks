@@ -59,7 +59,7 @@
                                   <td class="text-center"><?php echo $full_name?></td>
                                   <td class="text-center"><?php echo $username?></td>
                                   <td class="text-center">
-                                      <a href="#" class="btn btn-default waves-teal btn-success">Update Admin</a>
+                                      <a href="<?php HOME;?>update-admin.php?id=<?php echo$id; ?>" class="btn btn-default waves-teal btn-success">Update Admin</a>
                                       <a href="<?php HOME;?>delete-admin.php?id=<?php echo$id; ?>" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
                                   </td>
                               </tr>
