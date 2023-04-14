@@ -24,9 +24,9 @@
 
               <table class="tbl-full">
                 <tr>
-                        <th>S.N.</th>
-                        <th>Full Name</th>
-                        <th>Username</th>
+                        <th class="text-center">S.N.</th>
+                        <th class="text-center">Full Name</th>
+                        <th class="text-center">Username</th>
                         <th class="text-center">Actions</th>
                 </tr>
 
@@ -55,9 +55,9 @@
                               //DIsplay value dalam table
                               ?>
                               <tr>
-                                  <td><?php echo $sn++?></td>
-                                  <td><?php echo $full_name?></td>
-                                  <td><?php echo $username?></td>
+                                  <td class="text-center"><?php echo $sn++?></td>
+                                  <td class="text-center"><?php echo $full_name?></td>
+                                  <td class="text-center"><?php echo $username?></td>
                                   <td class="text-center">
                                       <a href="#" class="btn btn-default waves-teal btn-success">Update Admin</a>
                                       <a href="<?php HOME;?>delete-admin.php?id=<?php echo$id; ?>" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
