@@ -10,18 +10,24 @@
                         echo $_SESSION['add'];
                         unset($_SESSION['add']);
                     }
+
+                    if(isset($_SESSION['delete']))
+                    {
+                        echo $_SESSION['delete'];
+                        unset($_SESSION['delete']);
+                    }
                 ?><br/>
               <!-- Button to Add Admin -->
               <a href="add-admin.php"><button type="button" class="btn btn-default waves-effect waves-light">Add Admin</button></a>
 
-              <br /><br/>
+              <br />
 
               <table class="tbl-full">
                 <tr>
                         <th>S.N.</th>
                         <th>Full Name</th>
                         <th>Username</th>
-                        <th>Actions</th>
+                        <th class="text-center">Actions</th>
                 </tr>
 
                   <?php //Query untuk mendapatkan list semua data admin
@@ -52,9 +58,9 @@
                                   <td><?php echo $sn++?></td>
                                   <td><?php echo $full_name?></td>
                                   <td><?php echo $username?></td>
-                                  <td>
+                                  <td class="text-center">
                                       <a href="#" class="btn btn-default waves-teal btn-success">Update Admin</a>
-                                      <a href="#" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
+                                      <a href="<?php HOME;?>delete-admin.php?id=<?php echo$id; ?>" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
                                   </td>
                               </tr>
                             <?php
