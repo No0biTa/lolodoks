@@ -91,13 +91,13 @@
 		if($res==TRUE)
 		{
 			//Session untuk variable agar menampilkan message
-			$_SESSION['add'] = "Admin Added Successfully";
+			$_SESSION['add'] = "<div class='success'>Admin Added Successfully </div>";
 			//Redirect
 			header("location:".HOME.'admin/manage-admin.php');
 		}
 		else{
 			//Session untuk variable agar menampilkan message
-			$_SESSION['add'] = "Failed to Add Admin";
+			$_SESSION['add'] = "<div class='failed'>Failed to Add Admin </div>";
 			//Redirect
 			header("location:".HOME.'admin/add-admin.php');
 		}

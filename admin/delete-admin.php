@@ -17,14 +17,14 @@
     {
         //Eksekusi query berhasil dan admin berhasil di delete
         //echo 'Admin deleted';
-        $_SESSION['delete'] = "Admin deleted successfully";
+        $_SESSION['delete'] = "<div class='success'>Admin deleted successfully</div>";
         //redirect ke manage admin
         header("location:".HOME.'admin/manage-admin.php');
 
     }else{
         //failed to delete admin
         //echo 'Failed to delete admin';
-        $_SESSION['delete'] = "Failed to Delete Admin! Please Try Again Later";
+        $_SESSION['delete'] = "<div class='failed'>Failed to Delete Admin! Please Try Again Later </div>";
         //redirect ke manage admin
         header("location:".HOME.'admin/manage-admin.php');
     }
