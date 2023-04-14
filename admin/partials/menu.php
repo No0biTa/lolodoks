@@ -23,3 +23,15 @@
             </div>
         </div>
         <!-- Menu Section End -->
+
+        <script>
+            function validate(){
+
+                var a = document.getElementById("password").value;
+                var b = document.getElementById("confirm_password").value;
+                if (a!=b) {
+                    alert("Passwords do no match");
+                    return false;
+                }
+            }
+        </script>

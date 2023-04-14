@@ -287,3 +287,6 @@ table tr td{
     float: left;
 }
 
+.error{
+    color: #e74c3c;
+}

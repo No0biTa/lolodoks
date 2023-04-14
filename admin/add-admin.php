@@ -11,21 +11,45 @@
                 unset($_SESSION['add']);
             }
             ?><br/>
-			<form action="" method="POST">
+
+            <?php
+            $nameErr = $usernameErr = $passErr ="";
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    if (empty($_POST["full_name"])) {
+                        $nameErr = "Name is required";
+                    }
+
+                    if (empty($_POST["username"])) {
+                        $usernameErr = "Username is required";
+                    }
+
+                    if (empty($_POST["password"])) {
+                        $passErr = "Password is required";
+                    }
+                }
+            ?>
+			<form action="" method="POST" onsubmit="return validate();">
 				<table class="tbl-50">
 					<div class="formbold-mb-2">
 						<label for="full_name" class="formbold-form-label"> Full Name </label>
 						<input type="text" name="full_name" placeholder="Full Name" class="formbold-form-input" />
+						<span class="error">* <?php echo $nameErr;?></span>
 					</div><br/>
 
                     <div class="formbold-mb-2">
                         <label for="username" class="formbold-form-label"> Username </label>
                         <input type="text" name="username" placeholder="Username" class="formbold-form-input" />
+                        <span class="error">* <?php echo $usernameErr;?></span>
                     </div><br/>
 
                     <div class="formbold-mb-2">
                         <label for="username" class="formbold-form-label"> Password </label>
-                        <input type="password" name="password" placeholder="Password" class="formbold-form-input" />
+                        <input type="password" name="password" id="password" placeholder="Password" class="formbold-form-input" />
+                    </div><br/>
+
+                    <div class="formbold-mb-2">
+                        <label for="username" class="formbold-form-label"> Confirm Password </label>
+                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Re-enter Password" class="formbold-form-input" />
                     </div><br/>
 					<div class="formbold-mb-2">
                         <input type="submit" name="submit" value="Save" class="btn btn-default waves-teal btn-success">
@@ -48,6 +72,10 @@
 		$full_name = $_POST['full_name'];
 		$username = $_POST['username'];
 		$password = md5($_POST['password']);//Passwrod Encryption with MD5
+
+        if (empty($full_name) or empty($username) or empty($password)) {
+            return false;
+        }
 
 		//Query SQL untuk menyimpan data ke DB
 		$sql = " INSERT INTO tbl_admin SET
