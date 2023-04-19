@@ -10,6 +10,13 @@
     margin: 0 auto;
     padding: 1%;
 }
+
+.wrapper{
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
 .img-responsive{
     width: 100%;
 }
@@ -36,11 +43,11 @@
 }
 
 a{
-    color: #ff6b81;
+    color: #00a8ff;
     text-decoration: none;
 }
 a:hover{
-    color: #ff4757;
+    color: #1289A7;
 }
 
 .btn{
@@ -50,13 +57,13 @@ a:hover{
     border-radius: 5px;
 }
 .btn-primary{
-    background-color: #ff6b81;
+    background-color: #00a8ff;
     color: white;
     cursor: pointer;
 }
 .btn-primary:hover{
     color: white;
-    background-color: #ff4757;
+    background-color: #1289A7;
 }
 h2{
     color: #2f3542;
@@ -85,7 +92,7 @@ fieldset{
 /* CSSS for navbar section */
 
 .logo{
-    width: 10%;
+    width: 15%;
     float: left;
 }
 .menu{
@@ -105,11 +112,11 @@ fieldset{
 /* CSS for Food SEarch Section */
 
 .food-search{
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/banner.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 7% 0;
+    padding: 8% 0;
 }
 
 .food-search input[type="search"]{

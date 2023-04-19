@@ -267,10 +267,10 @@ table tr td{
 .menu ul li a{
     text-decoration: none;
     font-weight: bold;
-    color: #ff6b81;
+    color: #00a8ff;
 }
 .menu ul li a:hover{
-    color: #ff4757;   
+    color: #1289A7;
 }
 
 /* CSS for main-content */
