@@ -1,4 +1,9 @@
-<?php include('../config/constants.php') ?>
+<?php include('../config/constants.php'); ?>
+
+<?php
+    //Authorization - Acces Control
+    //check
+?>
 
 <html>
     <head>
@@ -20,6 +25,7 @@
                     <li><a href="manage-category.php">Category</a></li>
                     <li><a href="manage-food.php">Food</a></li>
                     <li><a href="manage-order.php">Order</a></li>
+                    <li><a href="logout.php">Logout</a></li>
             </div>
         </div>
         <!-- Menu Section End -->
