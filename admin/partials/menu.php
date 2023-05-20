@@ -1,9 +1,11 @@
-<?php include('../config/constants.php'); ?>
+<?php 
 
-<?php
-    //Authorization - Acces Control
-    //check
+    include('../config/constants.php'); 
+    include('login-check.php');
+
+
 ?>
+
 
 <html>
     <head>
