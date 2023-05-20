@@ -3,7 +3,7 @@
     //include contants php
     include ('../config/constants.php');
 
-    // Mendapatkan ID yang akan di delet
+    // Mendapatkan ID yang akan di delete
     $id = $_GET['id'];
 
     //Membuat SQL query untuk delete admin
