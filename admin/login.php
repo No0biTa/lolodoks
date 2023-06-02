@@ -1,15 +1,33 @@
-<?php include('../config/constants.php'); ?>
+<?php
+include('../config/constants.php'); ?>
 
-<html>
+    <html lang="en" dir="ltr">
     <head>
-        <title>Login - Food Order System</title>
-        <link rel="stylesheet" href="../css/admin.css">
+        <meta charset="utf-8">
+        <title>MakanYuk | Login</title>
+        <link rel="stylesheet" href='/css/login.css'>
     </head>
-
     <body>
-        <div class="login">
-            <h1 class="text-center">Login</h1>
-            <br><br>
+    <div class="center">
+        <h1>Login</h1>
+        <form action="" method="POST">
+            <div class="txt_field">
+                <input type="text" name="username" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" name="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <input type="submit" name="submit" value="Login">
+            <div class="signup_link"></div>
+        </form>
+    </div>
+
+    </body>
+    </html>
 
             <?php
                 if(isset($_SESSION['login']))
@@ -24,23 +42,7 @@
                     unset($_SESSION['no-login-message']);
                 }
             ?>
-            <br><br>
 
-            <!-- Login Form Starts Here -->
-            <form action="" method="POST" class="text-center">
-                Username: <br>
-                <input type="text" name="username" placeholder="Enter Username"><br><br>
-                Password: <br>
-                <input type="password" name="password" placeholder="Enter Password"><br><br>
-
-                <input type="submit" name="submit" value="Login" class="btn-primary">
-            </form>
-
-            <p class="text-center">Created by Kelompok 6</p>
-        </div>
-    
-    </body>
-</html>
 
 <?php
     //check

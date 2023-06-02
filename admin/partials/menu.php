@@ -1,7 +1,7 @@
 <?php 
 
     include('../config/constants.php'); 
-    include('login-check.php');
+    include('../partials/login-check.php');
 
 
 ?>
@@ -9,7 +9,7 @@
 
 <html>
     <head>
-        <title>The Lolodoks - Home</title>
+        <title>MakanYuk - Home</title>
 
         <link rel="stylesheet" href="../css/admin.css">
         <style>
@@ -38,7 +38,7 @@
                 var a = document.getElementById("password").value;
                 var b = document.getElementById("confirm_password").value;
                 if (a!=b) {
-                    alert("Passwords do no match");
+                    alert("Passwords do not match");
                     return false;
                 }
             }
