@@ -3,8 +3,16 @@
 <div class="main-content">
   <div class="wrapper">
     <h1>Manage Category</h1>
-    
-         <br />
+
+          <?php
+
+          if(isset($_SESSION['add']))
+          {
+              echo $_SESSION['add'];
+              unset($_SESSION['add']);
+          }
+          ?>
+          <br><br>
               <!-- Button to Add Admin -->
               <a href="add-category.php"><button type="button" class="btn btn-default waves-effect waves-light">Add Category</button></a>
     
