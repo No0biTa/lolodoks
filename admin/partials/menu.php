@@ -1,9 +1,6 @@
 <?php 
 
-    include('../config/constants.php'); 
-    include('../partials/login-check.php');
-
-
+    include('../config/constants.php');
 ?>
 
 
@@ -37,7 +34,7 @@
 
                 var a = document.getElementById("password").value;
                 var b = document.getElementById("confirm_password").value;
-                if (a!=b) {
+                if (a!==b) {
                     alert("Passwords do not match");
                     return false;
                 }

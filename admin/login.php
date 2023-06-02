@@ -1,5 +1,4 @@
-<?php
-include('../config/constants.php'); ?>
+<?php include('../config/constants.php'); ?>
 
     <html lang="en" dir="ltr">
     <head>
@@ -10,6 +9,7 @@ include('../config/constants.php'); ?>
     <body>
     <div class="center">
         <h1>Login</h1>
+        <div class="error signup_link">Please login first to access admin panel</div>
         <form action="" method="POST">
             <div class="txt_field">
                 <input type="text" name="username" required>

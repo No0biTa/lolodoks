@@ -4,7 +4,7 @@
         <div class="wrapper">
             <h2>Update Admin</h2>
 
-            <br></br>
+            <br>
 
             <?php
                 //mendapatkan ID
@@ -37,26 +37,24 @@
 
             <form action="" method="POST">
                 <table class="tbl-30">
-                    <tr>
-                        <td>Full Name: </td>
-                        <td>
-                            <input type+"text" name="full_name" value="<?php echo $full_name; ?>">
-                        </td>
-                    </tr>
 
-                    <tr>
-                        <td>Username: </td>
-                        <td>
-                            <input type="text" name="username" value="<?php echo $username; ?>">
-                        </td>
-                    </tr>
+                    <div class="formbold-mb-2">
+                        <label for="full_name" class="formbold-form-label"> Full Name </label>
+                        <input type="text" name="full_name" value="<?php echo $full_name; ?>" class="formbold-form-input" />
+                        <span class="error">*</span>
+                    </div><br/>
 
-                    <tr>
-                        <td colspan="2">
-                            <input type="hidden" name="id" value="<?php echo $id; ?>">
-                            <input type="submit" name="submit" value="Update Admin" class="btn-secondary">
-                        </td>
-                    </tr>
+                    <div class="formbold-mb-2">
+                        <label for="username" class="formbold-form-label"> Username </label>
+                        <input type="text" name="username" value="<?php echo $username; ?>" class="formbold-form-input" />
+                        <span class="error">*</span>
+                    </div><br/>
+
+
+                    <div class="formbold-mb-2">
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
+                        <input type="submit" name="submit" value="Save" class="btn btn-default waves-teal btn-success">
+                    </div>
 
                 </table>
 
@@ -67,7 +65,7 @@
     </div>
 
     <?php
-        if($_POST['submit'])
+        if(isset($_POST['submit']))
         {
             //echo "Button Clicked";
             //mendapatkan semua value
@@ -93,7 +91,7 @@
             }
             else
             {
-                $_SESSION['update'] = "<div class='error'>Failed to Delete Admin.</div>";
+                $_SESSION['update'] = "<div class='error'>Failed to Update Admin.</div>";
                 header('location:'.HOME.'admin/manage-admin.php');
             }
 

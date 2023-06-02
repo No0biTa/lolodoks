@@ -16,33 +16,27 @@
             <form action="" method="POST">
 
                 <table class="tbl-30">
-                    <tr>
-                        <td>Old Password: </td>
-                        <td>
-                            <input type="password" name="current_password" placeholder="Current Password">
-                        </td>
-                    </tr>
 
-                    <tr>
-                        <td>New Password: </td>
-                        <td>
-                            <input type="password" name="new_password" placeholder="New Password">
-                        </td>
-                    </tr>
+                    <div class="formbold-mb-2">
+                        <label for="username" class="formbold-form-label"> Password </label>
+                        <input type="password" name="current_password" id="current_password" placeholder="Current Password" class="formbold-form-input" />
+                    </div><br/>
 
-                    <tr>
-                        <td>Confirm Password: </td>
-                        <td>
-                            <input type="password" name="confirm_password" placeholder="Confirm Password">
-                        </td>
-                    </tr>
+                    <div class="formbold-mb-2">
+                        <label for="username" class="formbold-form-label"> New Password </label>
+                        <input type="password" name="new_password" id="new_password" placeholder="New Password" class="formbold-form-input" />
+                    </div><br/>
 
-                    <tr>
-                        <td colspan="2">
-                            <input type="hidden" name="id" value="<?php echo $id; ?>">
-                            <input type="submit" name="submit" value="Change Password" class="btn-secondary">
-                        </td>
-                    </tr>
+                    <div class="formbold-mb-2">
+                        <label for="confirm_password" class="formbold-form-label"> Confirm Password </label>
+                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Re-enter New Password" class="formbold-form-input" />
+                    </div><br/>
+
+                    <div class="formbold-mb-2">
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
+                        <input type="submit" name="submit" value="Save" class="btn btn-default waves-teal btn-success">
+                    </div>
+
                 </table>
             </form>
         </div>

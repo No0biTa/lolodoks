@@ -89,6 +89,13 @@ fieldset{
 }
 
 
+/* CSS for Footer */
+.footer{
+    background-color: #116D6E;
+    color: white;
+}
+
+
 /* CSSS for navbar section */
 
 .logo{

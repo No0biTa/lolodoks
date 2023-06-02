@@ -43,12 +43,12 @@
                     </div><br/>
 
                     <div class="formbold-mb-2">
-                        <label for="username" class="formbold-form-label"> Password </label>
+                        <label for="password" class="formbold-form-label"> Password </label>
                         <input type="password" name="password" id="password" placeholder="Password" class="formbold-form-input" />
                     </div><br/>
 
                     <div class="formbold-mb-2">
-                        <label for="username" class="formbold-form-label"> Confirm Password </label>
+                        <label for="confirm_password" class="formbold-form-label"> Confirm Password </label>
                         <input type="password" name="confirm_password" id="confirm_password" placeholder="Re-enter Password" class="formbold-form-input" />
                     </div><br/>
 					<div class="formbold-mb-2">
