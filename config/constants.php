@@ -3,7 +3,7 @@
 	session_start();
 
 		//Create Constants to store non Repeating Values
-		define('HOME', 'http://localhost:63342/lolodoks/' );
+		define('HOME', 'http://localhost:63342/makanyuk/' );
 		define('LOCALHOST', '8.222.243.231');
 		define('DB_USERNAME', 'koala');
 		define('DB_PASSWORD', 'Koala@123');
