@@ -57,8 +57,9 @@
 					
 				</table>
 				
-		</form>
-	</div>
+		    </form>
+	    </div>
+    </div>
 
 
 <?php include('partials/footer.php'); ?>
