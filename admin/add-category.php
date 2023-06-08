@@ -97,6 +97,12 @@
 //                Upload gambar kita harus mengetahui nama source dan destinasi path
                 $image_name = $_FILES['image']['name'];
 
+//                Auto Rename IMage
+                $ext = end(explode('.',$image_name));
+
+//                Rename Image
+                $image_name = "Food Category_".rand(000, 999). ','.$ext;
+
                 $source_path = $_FILES['image']['tmp_name'];
 
                 $destination_path = "../images/category/".$image_name;
