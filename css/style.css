@@ -37,6 +37,10 @@
     color: white;
 }
 
+.text-black{
+    color: black;
+}
+
 .clearfix{
     clear: both;
     float: none;

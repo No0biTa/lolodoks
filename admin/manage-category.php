@@ -5,7 +5,6 @@
     <h1>Manage Category</h1>
 
           <?php
-
           if(isset($_SESSION['add']))
           {
               echo $_SESSION['add'];
