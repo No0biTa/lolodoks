@@ -19,41 +19,89 @@
 
               <table class="tbl-full">
                 <tr>
-                        <th>S.N.</th>
-                        <th>Full Name</th>
-                        <th>Username</th>
-                        <th>Actions</th>
+                        <th class="text-center">S.N.</th>
+                        <th class="text-center">Title</th>
+                        <th class="text-center">Image</th>
+                        <th class="text-center">Featured</th>
+                        <th class="text-center">Active</th>
+                        <th class="text-center">Actions</th>
                 </tr>
 
-                <tr>
-                        <td>1. </td>
-                        <td>Dummy</td>
-                        <td>Dummy</td>
-                        <td>
-                                <a href="#" class="btn btn-default waves-teal btn-success">Update Admin</a>        
-                                <a href="#" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
-                        </td>
-                </tr>
+                  <?php
+//                        Query Data from Database
+                  $sql = "SELECT * FROM tbl_category";
 
-                <tr>
-                        <td>2. </td>
-                        <td>Dummy</td>
-                        <td>Dummy</td>
-                        <td>
-                                <a href="#" class="btn btn-default waves-teal btn-success">Update Admin</a>        
-                                <a href="#" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
-                        </td>
-                </tr>
+//                  Execute query
+                  $res = mysqli_query($conn, $sql);
 
-                <tr>
-                        <td>3. </td>
-                        <td>Dummy</td>
-                        <td>Dummy</td>
-                        <td>
-                                <a href="#" class="btn btn-default waves-teal btn-success">Update Admin</a>        
-                                <a href="#" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
-                        </td>
-                </tr>
+//                  Count Rows
+                  $count = mysqli_num_rows($res);
+
+//                  Create Serial Number
+                  $sn=1;
+
+//                  Check apakah punya data dalam database atau tidak
+                  if($count>0)
+                  {
+//                      Punya Data
+//                      Tampilkan data
+                      while($row=mysqli_fetch_assoc($res))
+                      {
+                          $id=$row['id'];
+                          $title=$row['title'];
+                          $image_name=$row['image_name'];
+                          $featured=$row['featured'];
+                          $active=$row['active'];
+
+                          ?>
+                          <tr>
+                              <td class="text-center"><?php echo $sn++;?> </td>
+                              <td class="text-center"><?php echo $title;?>></td>
+
+                              <td class="text-center">
+
+                                  <?php
+                                        if ($image_name!="")
+                                        {
+//                                            DIsplay Image
+                                            ?>
+                                                <img src="<?php echo HOME; ?>images/category/<?php echo $image_name;?>" width="100px" >
+
+                                            <?php
+                                        }else
+                                  {
+//                                      Display Message
+                                            echo "<div class='error'>Image Not Added.</div>";
+                                  }
+                                  ?>
+                              </td>
+
+                              <td class="text-center"><?php echo $featured;?></td>
+                              <td class="text-center"><?php echo $active;?></td>
+                              <td class="text-center">
+                                  <a href="#" class="btn btn-default waves-teal btn-success">Update Category</a>
+                                  <a href="#" class="btn btn-default waves-teal btn-danger">Delete Category</a>
+                              </td>
+                          </tr>
+
+                          <?php
+                      }
+                  }else
+                  {
+//                      Tidak Punya data
+//                      Display notif dalam label
+                      ?>
+
+                      <tr>
+                          <td colspan="6"><div class="error">No Category Added.</div></td>
+                      </tr>
+                  <?php
+                  }
+
+                  ?>
+
+
+
               </table>
 
 </div>
