@@ -10,6 +10,24 @@
               echo $_SESSION['add'];
               unset($_SESSION['add']);
           }
+
+          if (isset($_SESSION['remove']))
+          {
+              echo $_SESSION['remove'];
+              unset($_SESSION['remove']);
+          }
+
+          if (isset($_SESSION['delete']))
+          {
+              echo $_SESSION['delete'];
+              unset($_SESSION['delete']);
+          }
+
+          if (isset($_SESSION['no-category-found']))
+          {
+              echo $_SESSION['no-category-found'];
+              unset($_SESSION['no-category-found']);
+          }
           ?>
           <br><br>
               <!-- Button to Add Admin -->
@@ -56,7 +74,7 @@
                           ?>
                           <tr>
                               <td class="text-center"><?php echo $sn++;?> </td>
-                              <td class="text-center"><?php echo $title;?>></td>
+                              <td class="text-center"><?php echo $title;?></td>
 
                               <td class="text-center">
 
@@ -79,8 +97,8 @@
                               <td class="text-center"><?php echo $featured;?></td>
                               <td class="text-center"><?php echo $active;?></td>
                               <td class="text-center">
-                                  <a href="#" class="btn btn-default waves-teal btn-success">Update Category</a>
-                                  <a href="#" class="btn btn-default waves-teal btn-danger">Delete Category</a>
+                                  <a href="<?php echo HOME; ?>admin/update-category.php" class="btn btn-default waves-teal btn-success">Update Category</a>
+                                  <a href="<?php echo HOME; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn btn-default waves-teal btn-danger">Delete Category</a>
                               </td>
                           </tr>
 
