@@ -120,3 +120,21 @@ input[type="submit"]:hover{
   margin: auto;
   text-align: center;
 }
+
+.failed{
+  background-color: #e74c3c;
+  border-radius: 8px;
+  width: 35%;
+  line-height: 31px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 5px 25px;
+  border: 0;
+  margin: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none !important;
+}

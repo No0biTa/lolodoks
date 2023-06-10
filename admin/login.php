@@ -71,7 +71,7 @@
         }
         else
         {
-            $_SESSION['login'] = "<div class='error text-center'>Username or Password did not match. </div>";
+            $_SESSION['login'] = "<div class='failed'>Username or Password did not match.</div>";
             header('location:'.HOME.'admin/login.php');
         }
 
