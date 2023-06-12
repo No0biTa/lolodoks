@@ -6,7 +6,7 @@
     
      <br />
               <!-- Button to Add Admin -->
-              <a href="#"><button type="button" class="btn btn-default waves-effect waves-light">Add Food</button></a>
+              <a href="<?php echo HOME;?>admin/add-food.php"><button type="button" class="btn btn-default waves-effect waves-light">Add Food</button></a>
 
               <br /><br/>
 
