@@ -5,6 +5,14 @@
         <h2>Add Food</h2>
         <br><br>
 
+        <?php
+            if(isset($_SESSION['upload_food']))
+            {
+                echo $_SESSION['upload_food'];
+                unset($_SESSION['upload_food']);
+            }
+        ?>
+
         <form action="" method="POST" onsubmit="return validate();" enctype="multipart/form-data">
             <table class="tbl-50">
                 <div class="formbold-mb-2">
@@ -32,7 +40,6 @@
                 <div class="formbold-mb-2">
                     <label for="title" class="formbold-form-label"> Category </label>
                     <select name="category" class="formbold-form-input">
-
                         <?php
     //                            Create PHP code to display category from database
     //                        1. Create SQL to get all active category
@@ -55,16 +62,14 @@
                                     $title = $row['title'];
 
                                     ?>
-
                                     <option value="<?php echo $id; ?>"><?php echo $title;?></option>
-
                                     <?php
                                 }
                             }else
                             {
 //                              We dont have
                         ?>
-                                <option value="0">No Category FOund</option>
+                                <option value="0">No Category Found</option>
                         <?php
                             }
                         ?>
@@ -87,11 +92,107 @@
                 <div class="formbold-mb-2">
                     <input type="submit" name="submit" value="Add Food" class="btn btn-default waves-teal btn-success">
                 </div>
-
             </table>
-
         </form>
+
+        <?php
+
+            if(isset($_POST['submit']))
+            {
+//                Mendapatkan data dari form
+                $title = $_POST['title'];
+                $description = $_POST['description'];
+                $price = $_POST['price'];
+                $category = $_POST['category'];
+
+//                Check radio for featured dan active
+                if(isset($_POST['featured']))
+                {
+                    //Mendapatkan valued dari form
+                    $featured = $_POST['featured'];
+                }
+                else
+                {
+                    //Set Default Value
+                    $featured = "No";
+                }
+
+                if(isset($_POST['active']))
+                {
+                    $active = $_POST['active'];
+                }
+                else
+                {
+                    $active = "No";
+                }
+
+//                2. Upload gambar
+        //                Check gambar pilihan
+                    if (isset($_FILES['image']['name']))
+                    {
+        //                Upload gambar kita harus mengetahui nama source dan destinasi path
+                        $image_name = $_FILES['image']['name'];
+
+                        if ($image_name!="")
+                        {
+
+        //                Auto Rename IMage
+                            $up_img = explode('.', $image_name);
+                            $ext = end($up_img);
+
+        //                Rename Image
+                            $image_name = "Food_img_".rand(000, 999). '.'.$ext;
+
+                            $src = $_FILES['image']['tmp_name'];
+
+                            $dst = "../images/food/".$image_name;
+
+        //                Upload Gambar
+                            $upload = move_uploaded_file($src, $dst);
+
+                            if($upload==false)
+                            {
+                                $_SESSION['upload_food'] = "<div class='error''>Failed to Upload Image.</div>";
+                                header('location'.HOME."admin/add-food.php");
+                                die();
+                            }
+                        }
+                    }else{
+                        $image_name="";
+                    }
+
+//                3. Insert to database
+                $sql2 = "INSERT INTO tbl_food SET
+                         title = '$title',
+                         description = '$description',
+                         price = $price,
+                         image_name = '$image_name',
+                         category_id = '$category',
+                         featured = '$featured',
+                         active = '$active'
+                         ";
+
+//                    Exectue the query
+                $res2 = mysqli_query($conn, $sql2);
+
+//                CHeck data inserted or not
+                if($res2 == true)
+                {
+//                    Data inserted success
+                    $_SESSION['add_food'] = "<div class='success'>Food Added Successfully </div>";
+                    //Redirect
+                    header('location:'.HOME.'admin/manage-food.php');
+                }
+                else{
+                    //Session untuk variable agar menampilkan message
+                    $_SESSION['add_food'] = "<div class='failed'>Failed to Add Food </div>";
+                    //Redirect
+                    header('location:'.HOME.'admin/manage-food.php');
+                }
+//                4. Redirect with message
+            }
+
+        ?>
     </div>
 </div>
-
 <?php include("partials/footer.php")?>
