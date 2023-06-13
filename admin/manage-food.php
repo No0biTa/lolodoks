@@ -20,14 +20,14 @@
 
               <table class="tbl-full">
                 <tr>
-                        <th>S.N.</th>
-                        <th>Title</th>
-                        <th>Price</th>
-                        <th>Image</th>
-                        <th>Description</th>
-                        <th>Featured</th>
-                        <th>Active</th>
-                        <th>Actions</th>
+                        <th class="text-center">S.N.</th>
+                        <th class="text-center">Title</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Image</th>
+                        <th class="text-center">Description</th>
+                        <th class="text-center">Featured</th>
+                        <th class="text-center">Active</th>
+                        <th class="text-center">Actions</th>
                 </tr>
 
                   <?php
@@ -55,10 +55,10 @@
                       ?>
 
                       <tr>
-                          <td><?php echo $sn++;?></td>
-                          <td<?php echo $title;?></td>
-                          <td>Rp.<?php echo $price;?></td>
-                          <td>
+                          <td class="text-center"><?php echo $sn++;?></td>
+                          <td class="text-center"><?php echo $title;?></td>
+                          <td class="text-center">Rp.<?php echo $price;?></td>
+                          <td class="text-center">
                               <?php
                                 if($image_name=="")
                               {
@@ -72,10 +72,10 @@
                               }
                               ?>
                               </td>
-                          <td><?php echo $description;?>></td>
-                          <td><?php echo $featured;?></td>
-                          <td><?php echo $active;?></td>
-                          <td>
+                          <td class="text-center"><?php echo $description;?>></td>
+                          <td class="text-center"><?php echo $featured;?></td>
+                          <td class="text-center"><?php echo $active;?></td>
+                          <td class="text-center">
                               <a href="#" class="btn btn-default waves-teal btn-success">Update Food</a>
                               <a href="#" class="btn btn-default waves-teal btn-danger">Delete Food</a>
                           </td>

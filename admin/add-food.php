@@ -17,28 +17,28 @@
             <table class="tbl-50">
                 <div class="formbold-mb-2">
                     <label for="title" class="formbold-form-label"> Title </label>
-                    <input type="text" name="title" placeholder="Full Name" class="formbold-form-input" />
+                    <input type="text" name="title" placeholder="Title" class="formbold-form-input" />
                     <span class="error">*</span>
                 </div><br/>
 
                 <div class="formbold-mb-2">
-                    <label for="title" class="formbold-form-label"> Description </label>
+                    <label for="description" class="formbold-form-label"> Description </label>
                     <textarea name="description" class="formbold-form-input" cols="30" rows="5" placeholder="Description"></textarea>
                 </div><br/>
 
                 <div class="formbold-mb-2">
-                    <label for="title" class="formbold-form-label"> Price </label>
+                    <label for="price" class="formbold-form-label"> Price </label>
                     <input type="number" name="price" class="formbold-form-input" />
                 </div><br/>
 
                 <div class="formbold-mb-2">
-                    <label for="title" class="formbold-form-label"> Select Image </label>
+                    <label for="img" class="formbold-form-label"> Select Image </label>
                     <input type="file" name="image"/>
                     <span class="error">*</span>
                 </div><br/>
 
                 <div class="formbold-mb-2">
-                    <label for="title" class="formbold-form-label"> Category </label>
+                    <label for="category" class="formbold-form-label"> Category </label>
                     <select name="category" class="formbold-form-input">
                         <?php
     //                            Create PHP code to display category from database
