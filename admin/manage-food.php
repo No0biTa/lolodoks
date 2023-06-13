@@ -16,6 +16,36 @@
                       echo $_SESSION['add_food'];
                       unset($_SESSION['add_food']);
                   }
+
+                  if(isset($_SESSION['delete_food']))
+                  {
+                      echo $_SESSION['delete_food'];
+                      unset($_SESSION['delete_food']);
+                  }
+
+                  if(isset($_SESSION['upload_food']))
+                  {
+                      echo $_SESSION['upload_food'];
+                      unset($_SESSION['upload_food']);
+                  }
+
+                  if(isset($_SESSION['unauthorized']))
+                  {
+                      echo $_SESSION['unauthorized'];
+                      unset($_SESSION['unauthorized']);
+                  }
+
+                  if(isset($_SESSION['failed-remove']))
+                  {
+                      echo $_SESSION['failed-remove'];
+                      unset($_SESSION['failed-remove']);
+                  }
+
+                  if(isset($_SESSION['updated']))
+                  {
+                      echo $_SESSION['updated'];
+                      unset($_SESSION['updated']);
+                  }
                   ?>
 
               <table class="tbl-full">
@@ -72,12 +102,12 @@
                               }
                               ?>
                               </td>
-                          <td class="text-center"><?php echo $description;?>></td>
+                          <td class="text-center"><?php echo $description;?></td>
                           <td class="text-center"><?php echo $featured;?></td>
                           <td class="text-center"><?php echo $active;?></td>
                           <td class="text-center">
-                              <a href="#" class="btn btn-default waves-teal btn-success">Update Food</a>
-                              <a href="#" class="btn btn-default waves-teal btn-danger">Delete Food</a>
+                              <a href="<?php echo HOME; ?>admin/update-food.php?id=<?php echo $id; ?>" class="btn btn-default waves-teal btn-success">Update Food</a>
+                              <a href="<?php echo HOME; ?>admin/delete-food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn btn-default waves-teal btn-danger">Delete Food</a>
                           </td>
                       </tr>
                   <?php

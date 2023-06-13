@@ -61,9 +61,9 @@
                                     $id = $row['id'];
                                     $title = $row['title'];
 
-                                    ?>
+                        ?>
                                     <option value="<?php echo $id; ?>"><?php echo $title;?></option>
-                                    <?php
+                        <?php
                                 }
                             }else
                             {
