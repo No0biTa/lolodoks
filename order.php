@@ -92,6 +92,7 @@
                 <?php
                     if(isset($_POST['submit']))
                     {
+//                        echo "Button Clicked";
 //                        Get all detail from the form
                         $food = $_POST['food'];
                         $price = $_POST['price'];
@@ -99,7 +100,7 @@
 
                         $total = $price * $qty; //total harga * jumlah
 
-                        $order_date = date("Y-m-d h:i:sa"); //Order Date
+                        $order_date = date("Y-m-d H:i:s"); //Order Date
 
                         $status = "Ordered"; //Ordered, on delibery, cancelled
 
@@ -126,18 +127,51 @@
 
                         $res2 = mysqli_query($conn, $sql2);
 
-                        if($res2==true)
+                        if($res2 == true)
                         {
-                            $_SESSION['order'] = "<div class='success'> Order Successfully Created.</div>";
+                            $_SESSION['order'] = "<div class='success text-center'> Order Successfully Created.</div>";
                             header('location:'.HOME);
                         }
                         else
                         {
-                            $_SESSION['order'] = "<div class='failed'> Failed to Order ! Please Try Again Later.</div>";
+                            $_SESSION['order'] = "<div class='failed text-center'> Failed to Order ! Please Try Again Later.</div>";
                             header('location:'.HOME);
                         }
                     }
+
+                if (!$conn) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
+
                 ?>
+
+<!--            --><?php
+//                $sql3 = "SELECT * FROM tbl_food";
+//
+//                // Check if the connection is successful
+//                if (!$conn) {
+//                    die("Connection failed: " . mysqli_connect_error());
+//                }
+//
+//                // Check if the SQL query is not empty
+//                if (empty($sql)) {
+//                    die("SQL query is empty");
+//                }
+//
+//                // Execute the SQL query
+//                $result = mysqli_query($conn, $sql3);
+//
+//                // Check if the query executed successfully
+//                if ($result) {
+//                    echo "Query executed successfully";
+//                    // You can further process the $result here
+//                } else {
+//                    echo "Error executing query: " . mysqli_error($conn);
+//                }
+//
+//                // Close the database connection
+//                mysqli_close($conn);
+//            ?>
 
         </div>
     </section>

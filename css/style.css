@@ -345,3 +345,39 @@ fieldset{
 .formbold-btn:hover {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 }
+
+.success{
+    background-color: #2ecc71;
+    border-radius: 8px;
+    width: 35%;
+    line-height: 31px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 5px 25px;
+    border: 0;
+    margin: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none !important;
+}
+
+.failed{
+    background-color: #e74c3c;
+    border-radius: 8px;
+    width: 35%;
+    line-height: 31px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 5px 25px;
+    border: 0;
+    margin: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none !important;
+}

@@ -3,6 +3,8 @@
     include('../config/constants.php');
 ?>
 
+<script src="https://kit.fontawesome.com/41c3d62909.js" crossorigin="anonymous"></script>
+
 
 <html>
     <head>

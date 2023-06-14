@@ -192,7 +192,7 @@ table tr td{
   }
 
   .formbold-mb-5 {
-    margin-bottom: 20px;
+      margin-bottom: 20px;
   }
   .formbold-main-wrapper {
     display: flex;
@@ -232,10 +232,27 @@ table tr td{
     outline: none;
     resize: none;
   }
+.formbold-form-textarea {
+    width: 20%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2d3436;
+    outline: none;
+    resize: auto;
+}
   .formbold-form-input:focus {
     border-color: #6a64f1;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
   }
+
+.formbold-form-textarea:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
 
   .formbold-btn {
     text-align: center;
