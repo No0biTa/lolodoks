@@ -41,6 +41,10 @@
     color: black;
 }
 
+.text-blue{
+    color: #00a8ff;
+}
+
 .clearfix{
     clear: both;
     float: none;
@@ -269,4 +273,9 @@ fieldset{
     .order{
         width: 100%;
     }
+}
+
+/* Other */
+.error{
+    color: #e74c3c;
 }

@@ -179,6 +179,10 @@
                                 }
                             }
                         }
+                        else
+                        {
+                            $image_name = $current_image;
+                        }
                     }
                     else
                     {
@@ -193,9 +197,9 @@
                             image_name = '$image_name',
                             category_id = '$category',
                             featured = '$featured',
-                            $active = '$active'
+                            active = '$active'
                             WHERE id=$id
-                    ";
+                            ";
 
     //                    Execute the query
                     $res3 = mysqli_query($conn, $sql3);
@@ -204,11 +208,11 @@
                     {
     //                     CAtegory updated
                         $_SESSION['updated'] = "<div class='success'>Food Updated Succesfully</div>";
-                        header("location:".HOME.'admin/manage-food.php');
+                        echo "<script> window.location.href='manage-food.php';</script>";
                     }else
                     {
                         $_SESSION['updated'] = "<div class='failed'>Failed to Update Food</div>";
-                        echo "<script> window.location.href='admin/update-food.php';</script>";
+                        echo "<script> window.location.href='manage-food.php';</script>";
                     }
 
                 }
@@ -216,5 +220,4 @@
             ?>
         </div>
     </div>
-
 <?php include('partials/footer.php'); ?>

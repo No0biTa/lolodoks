@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- Important to make website responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Website</title>
-
-    <!-- Link our CSS file -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <!-- Navbar Section Starts Here -->
-    <section class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html" title="Logo">
-                    <img src="images/MakanYuk-hori2.png" alt="MakanYuk Logo" class="img-responsive">
-                </a>
-            </div>
-
-            <div class="menu text-right">
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="categories.html">Categories</a>
-                    </li>
-                    <li>
-                        <a href="foods.html">Foods</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="clearfix"></div>
-        </div>
-    </section>
-    <!-- Navbar Section Ends Here -->
-
+<?php include('frontend/menu.php')?>
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search">
         <div class="container">
@@ -90,19 +47,6 @@
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
 
-    <!-- social Section Starts Here -->
-    <section class="social">
-        <div class="footer">
-            <div class="wrapper">
-                <p class="text-center">&copy;2023 All Rights Reserved, MakanYuk. Developed By - Kelompok 6</p>
-            </div>
-        </div>
-    </section>
-    <!-- social Section Ends Here -->
-
-    <!-- footer Section Starts Here -->
-
-    <!-- footer Section Ends Here -->
-
 </body>
 </html>
+<?php include('frontend/footer.php')?>
