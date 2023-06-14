@@ -2,7 +2,7 @@
 
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
-        <div class="container">
+        <div class="container form">
             
             <form action="<?php echo HOME;?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required>
@@ -12,6 +12,14 @@
         </div>
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
+
+        <?php
+        if(isset($_SESSION['order']))
+        {
+            echo $_SESSION['order'];
+            unset($_SESSION['order']);
+        }
+        ?><br/>
 
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
