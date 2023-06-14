@@ -37,7 +37,7 @@
             
             <h2 class="text-center text-black">Fill this form to confirm your order.</h2>
 
-            <form action="" class="order" method="post">
+            <form action="" class="order" method="POST">
                 <fieldset>
                     <legend><h3>Selected Food</h3></legend>
 
