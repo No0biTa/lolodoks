@@ -50,8 +50,9 @@
     {
         //proses login
         //mengambil data
-        $username = $_POST['username'];
-        $password = md5($_POST['password']);
+        $username = mysqli_real_escape_string($conn, $_POST['username']); //Using secure PHP
+        $raw_password = md5($_POST['password']); //Using Secure PHP
+        $password = mysqli_real_escape_string($conn, $raw_password);
 
         //SQL check
         $sql = "SELECT * FROM tbl_admin WHERE username='$username' AND password ='$password'";

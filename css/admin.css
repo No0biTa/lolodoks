@@ -297,7 +297,15 @@ table tr td{
 }
 
 .col-4{
-    width: 18%;
+    width: 15%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+}
+
+.col-8{
+    width: 24%;
     background-color: white;
     margin: 1%;
     padding: 2%;
