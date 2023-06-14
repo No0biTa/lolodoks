@@ -3,7 +3,7 @@
         <?php
             if(isset($_GET['food_id']))
             {
-                $food_id= $_GET['food_id'];
+                $food_id = $_GET['food_id'];
 
                 $sql = "SELECT * FROM tbl_food WHERE id=$food_id";
 
