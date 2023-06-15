@@ -101,7 +101,8 @@
                 {
 
 //                Auto Rename IMage
-                    $ext = end(explode('.',$image_name));
+                    $array = explode('.', $image_name);
+                    $ext = end($array);
 
 //                Rename Image
                     $image_name = "Food_Category_".rand(000, 999). '.'.$ext;
