@@ -357,3 +357,10 @@ table tr td{
   margin: 10% auto;
   padding: 2%;
 }
+
+.fa-border {
+    background-color: #dddddd;
+    border-style: solid;
+    border-radius: 25% 25% 25% 25%;
+    padding: 6% 7% 6% 7%;
+}

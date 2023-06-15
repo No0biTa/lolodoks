@@ -297,7 +297,9 @@ fieldset{
 
 .formbold-mb-5 {
     margin-bottom: 20px;
+
 }
+
 .formbold-main-wrapper {
     display: flex;
     align-items: center;
@@ -381,3 +383,6 @@ fieldset{
     text-decoration: none;
     outline: none !important;
 }
+
+
+

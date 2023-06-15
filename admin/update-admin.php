@@ -50,6 +50,21 @@
                         <span class="error">*</span>
                     </div><br/>
 
+                    <div class="formbold-mb-2">
+                        <label for="username" class="formbold-form-label"> Password </label>
+                        <input type="password" name="current_password" id="current_password" placeholder="Current Password" class="formbold-form-input" />
+                    </div><br/>
+
+                    <div class="formbold-mb-2">
+                        <label for="username" class="formbold-form-label"> New Password </label>
+                        <input type="password" name="new_password" id="new_password" placeholder="New Password" class="formbold-form-input" />
+                    </div><br/>
+
+                    <div class="formbold-mb-2">
+                        <label for="confirm_password" class="formbold-form-label"> Confirm Password </label>
+                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Re-enter New Password" class="formbold-form-input" />
+                    </div><br/>
+
 
                     <div class="formbold-mb-2">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
@@ -72,28 +87,55 @@
             $id = $_POST['id'];
             $full_name = $_POST['full_name'];
             $username = $_POST['username'];
+            $current_password = md5($_POST['current_password']);
+            $new_password = md5($_POST['new_password']);
+            $confirm_password = md5($_POST['confirm_password']);
 
-            //membuat SQL Query
-            $sql = "UPDATE tbl_admin SET 
-            full_name = '$full_name',
-            username = '$username'
-            WHERE id='$id'
-            ";
+            // check current ID dan current Password
+            $sql3 = "SELECT * FROM tbl_admin WHERE id=$id AND password='$current_password'";
 
-            //execute the query
-            $res = mysqli_query($conn, $sql);
-            
-            //check query
-            if($res==true)
+            //execute the Query
+            $res3 = mysqli_query($conn, $sql3);
+
+            if($res3==true)
             {
-                $_SESSION['update'] = "<div class='success'>Admin Update Sucessfully.</div>";
-                header('location:'.HOME.'admin/manage-admin.php');
+                $count=mysqli_num_rows($res3);
+
+                if($count==1)
+                {
+                    //echo "User Found";
+
+                    //membuat SQL Query
+                    $sql = "UPDATE tbl_admin SET 
+                            full_name = '$full_name',
+                            username = '$username',
+                            password='$new_password'
+                            WHERE id='$id' 
+                            ";
+
+                    //execute the query
+                    $res = mysqli_query($conn, $sql);
+
+                    //check query
+                    if($res==true)
+                    {
+                        $_SESSION['update'] = "<div class='success'>Admin Update Sucessfully.</div>";
+                        header('location:'.HOME.'admin/manage-admin.php');
+                    }
+                    else
+                    {
+                        $_SESSION['update'] = "<div class='error'>Failed to Update Admin.</div>";
+                        header('location:'.HOME.'admin/manage-admin.php');
+                    }
+                }
+                else
+                {
+                    $_SESSION['user-not-found'] = "<div class='error'>User Not Found. </div>";
+                    header('location:'.HOME.'admin/manage-admin.php');
+                }
             }
-            else
-            {
-                $_SESSION['update'] = "<div class='error'>Failed to Update Admin.</div>";
-                header('location:'.HOME.'admin/manage-admin.php');
-            }
+
+
 
         }
     ?>

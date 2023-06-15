@@ -30,11 +30,11 @@
             ?>
 			<form action="" method="POST" onsubmit="return validate();">
 				<table class="tbl-50">
-					<div class="formbold-mb-2">
-						<label for="full_name" class="formbold-form-label"> Full Name </label>
-						<input type="text" name="full_name" placeholder="Full Name" class="formbold-form-input" />
-						<span class="error">* <?php echo $nameErr;?></span>
-					</div><br/>
+                        <div class="formbold-mb-2">
+                            <label for="full_name" class="formbold-form-label"> Full Name </label>
+                            <input type="text" name="full_name" placeholder="Full Name" class="formbold-form-input" />
+                            <span class="error">* <?php echo $nameErr;?></span>
+                        </div><br/>
 
                     <div class="formbold-mb-2">
                         <label for="username" class="formbold-form-label"> Username </label>

@@ -85,7 +85,7 @@
                                     <td class="text-center"><?php echo $customer_email;?></td>
                                     <td class="text-center"><?php echo $customer_address;?></td>
                                     <td class="text-center">
-                                        <a href="<?php echo HOME;?>admin/update-order.php?id=<?php echo $id; ?>"><i class="fa-regular fa-pen-to-square"></i></a>
+                                        <a href="<?php echo HOME;?>admin/update-order.php?id=<?php echo $id; ?>"><i class="fa-regular fa-border fa-pen-to-square" style="color: #2ecc71"></i></a>
                                     </td>
                                 </tr>
 

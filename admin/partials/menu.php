@@ -10,7 +10,7 @@
     <head>
         <title>MakanYuk - Home</title>
 
-        <link rel="stylesheet" href="../css/admin.css">
+        <link rel="stylesheet" href="/css/admin.css">
         <style>
          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
         </style>

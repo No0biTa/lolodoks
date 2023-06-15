@@ -85,9 +85,8 @@
                                   <td class="text-center"><?php echo $full_name?></td>
                                   <td class="text-center"><?php echo $username?></td>
                                   <td class="text-center">
-                                      <a href=<?php HOME; ?>update-password.php?id=<?php echo$id; ?>" class="btn btn-default waves-teal btn-success">Update Password</a>
-                                      <a href="<?php HOME;?>update-admin.php?id=<?php echo$id; ?>"><i class="fa-regular fa-pen-to-square"></i></a>
-                                      <a href="<?php HOME;?>delete-admin.php?id=<?php echo$id; ?>" class="btn btn-default waves-teal btn-danger">Delete Admin</a>
+                                      <a href="<?php HOME;?>update-admin.php?id=<?php echo$id; ?>"><i class="fa-regular fa-border fa-pen-to-square" style="color: #2ecc71"></i></a>
+                                      <a href="<?php HOME;?>delete-admin.php?id=<?php echo$id; ?>"><i class="fa-regular fa-border fa-trash-can" style="color: #ff0000;"></i></a>
                                   </td>
                               </tr>
                             <?php

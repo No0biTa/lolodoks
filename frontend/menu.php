@@ -1,8 +1,10 @@
 <?php include('config/constants.php')?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/41c3d62909.js" crossorigin="anonymous"></script>
     <!-- Important to make website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MakanYuk</title>
@@ -36,7 +38,7 @@
                     <a href="#">Contact</a>
                 </li>
                 <li>
-                    <a href="#" class="error"> Review Here</a>
+                    <a href="<?php echo HOME;?>review.php" class="error"> Review Here</a>
                 </li>
             </ul>
         </div>
